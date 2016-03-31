@@ -5,4 +5,4 @@
 # 3. If tmpfs is defined in the kernel, it will be used.
 #
 # Set this to yes if you do not want OpenRC to attempt to mount /dev.
-skip_mount_dev="yes"
+# skip_mount_dev="NO"

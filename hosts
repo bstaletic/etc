@@ -8,8 +8,7 @@
 #
 
 # IPv4 and IPv6 localhost aliases
-127.0.0.1	galifrey.homeworld galifrey localhost
-::1		galifrey.homeworld galifrey localhost
+127.0.0.1	localhost acer-gentoo
 
 #
 # Imaginary network.

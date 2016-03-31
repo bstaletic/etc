@@ -1,8 +1,0 @@
-#!/bin/sh
-
-if [ ! -f /var/run/utmp ]; then
-	touch /var/run/utmp
-fi
-
-chmod 664 /var/run/utmp
-chown :utmp /var/run/utmp

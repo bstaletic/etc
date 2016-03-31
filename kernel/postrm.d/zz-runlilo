@@ -2,7 +2,7 @@
 #
 #  zz-runlilo - postrm script for modern kernel management
 #
-#  Copyright 2010-2014 Joachim Wiedorn
+#  Copyright 2010 Joachim Wiedorn
 #  All rights reserved.
 #
 #  Licensed under the terms contained in the file 'COPYING'
@@ -24,11 +24,10 @@ case "$PAR" in
 
   ever|remove)
     # Run the boot loader installer
-    # and ignore error on degraded mdadm RAID1
     if [ -f /sbin/lilo ]; then
       if [ -f /etc/lilo.conf ]; then
         # Do not abort kernel removal in case of error
-        lilo -H  </dev/null  >&2  || true
+        lilo  </dev/null  >&2  || true
       fi
     fi
     ;;

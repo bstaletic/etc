@@ -1,4 +1,4 @@
-# /etc/lilo.conf  -   systemwide LILO configuration (LILO 24)
+# /etc/lilo.conf  -   systemwide LILO configuration (LILO 23)
 # details see in manpages: lilo(8) and lilo.conf(5)
 
 # +-------------------------------------------------------------+
@@ -20,18 +20,12 @@
 # partitions above 1024 cylinders.
 lba32
 
-# Defines the boot device.  This is where Lilo installs its boot
+# Specifies the boot device.  This is where Lilo installs its boot
 # block.  It can be either a partition, or the raw device, in which
 # case it installs in the MBR, and will overwrite the current MBR.
 # With newer kernel you should use the ID of the boot device, which
 # can be found here: /dev/disks/by-id/ata*.
 boot = /dev/sda
-
-# Defines the partition which is the root partition. This partition
-# will be mounted at first from the kernel. With newer kernel you
-# should use the UUID (UUID="...") of the root device, which can be
-# found here: /dev/disks/by-uuid/*.
-root = /dev/sda1
 
 # This option may be needed for some software RAID installs.
 #raid-extra-boot = mbr-only
@@ -70,8 +64,7 @@ install = menu
 # The first character of each part sets the text frontcolor, 
 # the second character of earch part sets the text backcolor,
 # an upper-case character sets bold face text (frontcolor).
-#
-# E.g. 'menu-scheme=wm:rw:wm:Wm'. Possible colors: 
+# i.g. 'menu-scheme=wm:rw:wm:Wm'. Possible colors: 
 # k=black, b=blue, g=green, c=cyan, r=red, m=magenta, y=yellow, w=white.
 menu-scheme = Wb:Yr:Wb:Wb
 #menu-title = " DESDEMONA Boot-Manager "
@@ -111,39 +104,18 @@ timeout = 100
 #   vga=ask       stop and ask for user input: choice of text mode
 #   vga=<mode>    use the corresponding text mode number. A list of  
 #                   available modes can be obtained by booting with  
-#                   'vga=ask' and then pressing [Enter].
-#
+#                   vga=ask'  and then pressing [Enter].
 # Another way is the use of frame buffer mode. Then the kernel 
 # will switch from the normal vga text mode (80x25) to the frame
-# buffer <mode> (if frame buffer support is in the kernel):
-#                   16bit:    32bit:
-#     640x480 :     0x311     0x312
-#     800x600 :     0x314     0x315
-#    1024x768 :     0x317     0x318
-#    1280x960 :     0x365     0x366
-#    1280x1024:     0x31A     0x31B
-#    1400x1050:     0x345     0x346
-#    1600x1200:     0x333     0x334
-#    1680x1050:     0x3D2     0x3D4
-#    1920x1440:     0x337     0x338
+# buffer mode (if frame buffer support is in the kernel):
+#   vga=0x314      800x600 @ 16 bit
+#   vga=0x317     1024x768 @ 16 bit
+#   vga=0x318     1024x768 @ 24 bit
 #vga = ask
 vga = normal
 #vga = 0x317
 
 # ---------------------------------------------------------------
-
-# Set a password here and uncomment the 'restricted' lines in
-# the image definitions below. Then a password must be typed
-# to boot anything but a default configuration. If a command
-# line is given, other than one specified by an 'append'
-# statement in this lilo.conf, the password is required, but
-# a standard default boot will not require one.
-#
-# If anyone have access to the console, with this password and
-# the 'restricted' option you prevent booting with something
-# like 'Linux init=/bin/sh' and thus becoming `root' without
-# proper authorization.
-#password = count4this
 
 # Kernel command line options that apply to all installed images go
 # here.  See 'kernel-parameters.txt' in the Linux kernel 'Documentation'
@@ -165,22 +137,20 @@ vga = normal
 # usually with the initrd file. Configure all GNU/Linux systems
 # on other partitions, too.
 
-# Warning: labels must be less than 16 characters long.
-
 # first example (default)
-image = /boot/vmlinuz-3.12-1-generic
+image = /boot/vmlinuz-2.6.32-2-generic
 	label = "Linux"
-#	root = /dev/sda2
+	root = /dev/sda2
 	read-only
 #	restricted
 #	alias = 1
 #	optional
-	initrd = /boot/initrd.img-3.12-1-generic
+	initrd = /boot/initrd.img-2.6.32-2-generic
 
 # second example
 image = /boot/vmlinuz-2.6.32-1-generic
-	label = "Linux OLD"
-#	root = /dev/sdb1
+	label = "LinuxOLD"
+	root = /dev/sdb1
 	read-only
 #	restricted
 #	alias = 2
@@ -190,7 +160,7 @@ image = /boot/vmlinuz-2.6.32-1-generic
 # third example
 image = /mnt/testsystem/boot/vmlinuz-2.6.26-1-custom
 	label = "Testsystem"
-#	root = /dev/sda3
+	root = /dev/sda3
 	read-only
 #	restricted
 #	alias = 3
@@ -203,7 +173,7 @@ image = /mnt/testsystem/boot/vmlinuz-2.6.26-1-custom
 # system.
 
 other = /dev/sda1
-	label = "MS-Windows"
+	label = "Windows XP"
 #	restricted
 #	alias = 4
 
@@ -213,7 +183,7 @@ other = /dev/sdb2
 #	alias = 5
 
 other = /dev/sdb3
-	label = "FreeBSD"
+	label = "Windows 2003"
 #	restricted
 #	alias = 6
 	boot-as = 0x80

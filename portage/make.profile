@@ -1,1 +1,1 @@
-/home/portage-tree/portage/profiles/hardened/linux/amd64
+../../usr/portage/profiles/default/linux/amd64/13.0

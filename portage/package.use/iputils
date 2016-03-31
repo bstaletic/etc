@@ -1,7 +1,1 @@
 net-misc/iputils -caps -filecaps
-# required by media-gfx/feh-2.14::gentoo
-# required by media-gfx/feh (argument)
->=media-libs/imlib2-1.4.7 X
-# required by media-sound/ncmpcpp-0.7.1::gentoo
-# required by media-sound/ncmpcpp (argument)
->=dev-libs/boost-1.57.0 nls icu

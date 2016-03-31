@@ -14,12 +14,7 @@
 # <fs>			<mountpoint>	<type>		<opts>		<dump/pass>
 
 # NOTE: If your BOOT partition is ReiserFS, add the notail option to opts.
-UUID=aec667f6-39c8-4340-9797-320133f0f503		/		ext4		noauto,noatime	1 1
-UUID=3ccca42d-ca52-4a1e-84eb-9db441c96897		/boot		ext4		noatime		0 2
-UUID=07c41687-57a6-4ad1-9868-d22838a64dd1		/home		ext4		defaults	0 2
-#proc							/proc 		proc		rw,nosuid,noexec,relatime,nodev 0 0
-#sysfs							/sys		sysfs		rw,nosuid,noexec,relatime,nodev 0 0
-shm							/dev/shm	tmpfs		rw,relatime 0 0
-devpts                  				/dev/pts        devpts          rw,nosuid,noexec,relatime,gid=5,mode=620 0 0
-run							/run		tmpfs		rw,nosuid,nodev,noexec,relatime 0 0
-
+/dev/sda5		/boot		ext4		noauto,noatime	1 2
+/dev/sda6		/		ext4		noatime		0 1
+/dev/sda8		none		swap		sw		0 0
+/dev/sda9		/home		ext4		defaults	0 0

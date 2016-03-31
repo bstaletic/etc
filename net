@@ -1,0 +1,2 @@
+eth0_config="192.168.53.210/22"
+eth0_routes="default via 192.168.52.1"

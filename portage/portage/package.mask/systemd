@@ -1,0 +1,6 @@
+sys-apps/dbus
+sys-auth/polkit
+sys-apps/systemd
+sys-auth/consolekit
+media-sound/pulseaudio
+#sys-fs/udev

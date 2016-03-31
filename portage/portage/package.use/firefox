@@ -1,0 +1,1 @@
+www-client/firefox bindist custom-cflags custom-optimization egl gstreamer system-icu system-jpeg system-cairo system-libvpx system-sqlite

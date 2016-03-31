@@ -1,0 +1,1 @@
+/home/portage-tree/portage/profiles/hardened/linux/amd64

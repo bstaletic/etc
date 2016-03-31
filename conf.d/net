@@ -1,0 +1,2 @@
+config_eth0="192.168.0.101/24 brd 255.255.255.0"
+routes_eth0="default via 192.168.0.1"

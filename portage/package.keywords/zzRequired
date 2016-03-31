@@ -1,0 +1,38 @@
+# required by sys-freebsd/freebsd-lib-10.2-r2::gentoo
+# required by sys-freebsd/freebsd-ubin-10.2-r1::gentoo
+# required by sys-freebsd/freebsd-usbin-10.2-r4::gentoo
+# required by sys-freebsd/freebsd-sources-10.2-r3::gentoo[build-kernel]
+# required by sys-freebsd/freebsd-libexec-10.2::gentoo
+# required by sys-freebsd/freebsd-sbin-10.2::gentoo
+=sys-freebsd/freebsd-share-10.2 **
+# required by sys-freebsd/freebsd-libexec-10.2::gentoo
+# required by sys-freebsd/freebsd-usbin-10.2-r4::gentoo
+# required by sys-freebsd/freebsd-sources-10.2-r3::gentoo[build-kernel]
+# required by sys-freebsd/freebsd-ubin-10.2-r1::gentoo[-build]
+=sys-freebsd/freebsd-lib-10.2-r2 **
+# required by sys-freebsd/freebsd-sources-10.2-r3::gentoo[build-kernel]
+# required by sys-freebsd/freebsd-ubin-10.2-r1::gentoo[-build]
+=sys-freebsd/freebsd-usbin-10.2-r4 **
+# required by sys-freebsd/freebsd-ubin-10.2-r1::gentoo
+# required by sys-freebsd/freebsd-usbin-10.2-r4::gentoo
+# required by sys-freebsd/freebsd-sources-10.2-r3::gentoo[build-kernel]
+# required by sys-freebsd/freebsd-libexec-10.2::gentoo
+# required by sys-freebsd/freebsd-lib-10.2-r2::gentoo
+# required by sys-freebsd/freebsd-bin-10.2::gentoo
+# required by freebsd-bin (argument)
+=sys-freebsd/freebsd-sbin-10.2 **
+# required by sys-freebsd/freebsd-usbin-10.2-r4::gentoo
+# required by sys-freebsd/freebsd-sources-10.2-r3::gentoo[build-kernel]
+# required by sys-freebsd/freebsd-ubin-10.2-r1::gentoo[-build]
+=sys-freebsd/freebsd-libexec-10.2 **
+# required by freebsd-bin (argument)
+=sys-freebsd/freebsd-bin-10.2 **
+# required by sys-freebsd/freebsd-usbin-10.2-r4::gentoo
+# required by sys-freebsd/freebsd-sources-10.2-r3::gentoo[build-kernel]
+# required by sys-freebsd/freebsd-libexec-10.2::gentoo
+# required by sys-freebsd/freebsd-sbin-10.2::gentoo
+=sys-freebsd/freebsd-ubin-10.2-r1 **
+# required by sys-freebsd/freebsd-lib-10.2-r2::gentoo
+# required by sys-freebsd/freebsd-ubin-10.2-r1::gentoo
+# required by sys-freebsd/freebsd-usbin-10.2-r4::gentoo
+=sys-freebsd/freebsd-sources-10.2-r3 **
